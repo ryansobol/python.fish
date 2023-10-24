@@ -1,8 +1,8 @@
 function _python_install --on-event python_install
-  brew install python@3.11
+  brew install python@3.12
 
-  fish_add_path --universal $HOMEBREW_PREFIX/opt/python@3.11/bin
-  fish_add_path --universal $HOMEBREW_PREFIX/opt/python@3.11/libexec/bin
+  fish_add_path --universal $HOMEBREW_PREFIX/opt/python@3.12/bin
+  fish_add_path --universal $HOMEBREW_PREFIX/opt/python@3.12/libexec/bin
 end
 
 function ___fish_remove_path --argument-names var_scope user_path
@@ -11,8 +11,8 @@ function ___fish_remove_path --argument-names var_scope user_path
 end
 
 function _python_uninstall --on-event python_uninstall
-  ___fish_remove_path --universal $HOMEBREW_PREFIX/opt/python@3.11/libexec/bin
-  ___fish_remove_path --universal $HOMEBREW_PREFIX/opt/python@3.11/bin
+  ___fish_remove_path --universal $HOMEBREW_PREFIX/opt/python@3.12/libexec/bin
+  ___fish_remove_path --universal $HOMEBREW_PREFIX/opt/python@3.12/bin
 
-  brew uninstall python@3.11
+  brew uninstall python@3.12
 end
